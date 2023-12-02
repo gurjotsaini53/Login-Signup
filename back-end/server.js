@@ -3,6 +3,9 @@ const app = express();
 const port = 8000;
 const connectDb = require("./db/dbConnect");
 const User = require("./db/user");
+const cors = require('cors');
+
+app.use(cors());
 
 //Middleware for parsing data
 app.use(express.json());
